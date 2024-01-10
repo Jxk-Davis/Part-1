@@ -5,6 +5,9 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     public float hSpe;
+    public GameObject projectile;
+    public GameObject cannon;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +19,10 @@ public class Move : MonoBehaviour
     {
         float dir = Input.GetAxis("Horizontal");
         transform.Translate(dir * hSpe * Time.deltaTime, 0, 0);
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(projectile, cannon.transform.position, transform.rotation);
+        }
     }
 }
