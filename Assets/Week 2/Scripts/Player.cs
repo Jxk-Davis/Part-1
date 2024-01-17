@@ -22,7 +22,10 @@ public class Player : MonoBehaviour
     {
         direction.x = Input.GetAxis("Horizontal");
         direction.y = Input.GetAxis("Vertical");
+    }
 
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("You've been hit by, you've been struck by: a " + collision.gameObject);
     }
 }
