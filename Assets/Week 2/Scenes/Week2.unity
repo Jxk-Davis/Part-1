@@ -599,7 +599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8007070089331231358, guid: cb22fce1cd948ca4780c61bfd7f0bd6b, type: 3}
       propertyPath: m_Name
-      value: Switch (1)
+      value: Switch (Reward)
       objectReference: {fileID: 0}
     - target: {fileID: 8098877596861402561, guid: cb22fce1cd948ca4780c61bfd7f0bd6b, type: 3}
       propertyPath: activate
