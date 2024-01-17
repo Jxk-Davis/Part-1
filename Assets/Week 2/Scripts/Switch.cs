@@ -21,13 +21,13 @@ public class Switch : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("what's happening, " + collision.gameObject + " eh?");
+        Debug.Log(gameObject + ": what's happening " + collision.gameObject + ", eh?");
         sprRend.color = Color.red;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("later, " + collision.gameObject);
+        Debug.Log(gameObject + ": later, " + collision.gameObject);
         sprRend.color = Color.yellow;
     }
 }

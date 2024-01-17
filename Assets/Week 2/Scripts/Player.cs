@@ -26,6 +26,6 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("You've been hit by, you've been struck by: a " + collision.gameObject);
+        Debug.Log(gameObject + ": I've been hit by, I've been struck by: a " + collision.gameObject);
     }
 }
