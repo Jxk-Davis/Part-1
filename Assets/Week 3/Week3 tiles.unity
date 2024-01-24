@@ -3492,7 +3492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forwSpe: 600
   steerSpe: 50
-  maxSpe: 5
+  maxSpe: 4
 --- !u!70 &1763677337
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
