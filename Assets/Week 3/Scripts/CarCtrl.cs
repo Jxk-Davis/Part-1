@@ -7,8 +7,9 @@ public class CarCtrl : MonoBehaviour
     Rigidbody2D rb2d;
     float accel;
     float steer; //input values
-    public float forwSpe = 300;
-    public float steerSpe = 40;
+    public float forwSpe;
+    public float steerSpe;
+    public float maxSpe;
 
     void Start()
     {
@@ -26,6 +27,9 @@ public class CarCtrl : MonoBehaviour
     {
         rb2d.AddTorque(steer * -steerSpe * Time.deltaTime);
         Vector2 force = transform.up * accel * forwSpe * Time.deltaTime;
-        rb2d.AddForce(force);
+        if(rb2d.velocity.magnitude < maxSpe)
+        {
+            rb2d.AddForce(force);
+        }
     }
 }
