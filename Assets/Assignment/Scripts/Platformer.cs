@@ -12,6 +12,7 @@ public class Platformer : MonoBehaviour
     public bool grounded;
     public bool jumping;
     private Rigidbody2D rb2d;
+    public GameObject wall;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +44,6 @@ public class Platformer : MonoBehaviour
             {
                 rb2d.AddForce(Vector2.up * jumpForce); // get pushed up by jumpForce
                 grounded = false;// set grounded to false
-                jumping = false; //set jumping to false
             }
         }
     }
@@ -60,6 +60,10 @@ public class Platformer : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        grounded = true;
+        if(collision.gameObject != wall)
+        {
+            grounded = true;
+            jumping = false; //set jumping to false
+        } 
     }
 }

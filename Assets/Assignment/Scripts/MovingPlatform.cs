@@ -17,7 +17,16 @@ public class MovingPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //move up/down by spe
-        //check each frame if y transform equals or exceeds that of Point A or Point B, if so multiply spe by -1
+        transform.Translate(0,spe * Time.deltaTime,0); //move up by spe over time
+        
+        if (gameObject.transform.position.y >= pointA.transform.position.y) //check if we are higher than A. if so...
+        { 
+            spe *= -1; //reverse speed
+        }
+
+        if (gameObject.transform.position.y <= pointB.transform.position.y) //check if we are lower than A. if so...
+        {
+            spe *= -1; //reverse speed
+        }
     }
 }
