@@ -10,11 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 794382242527301502}
   - component: {fileID: 2842123973587580082}
-  - component: {fileID: 2828318693218833268}
   - component: {fileID: 631661341592170674}
   - component: {fileID: 5719931963275803476}
   - component: {fileID: 2252664270924404762}
-  - component: {fileID: 7123418105206602031}
   m_Layer: 0
   m_Name: Gem
   m_TagString: Untagged
@@ -89,18 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2828318693218833268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2448403329993188506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 270ccf0b3b3bd954c80d06246c81965e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &631661341592170674
 Rigidbody2D:
   serializedVersion: 4
@@ -216,15 +202,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
---- !u!114 &7123418105206602031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2448403329993188506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 270ccf0b3b3bd954c80d06246c81965e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

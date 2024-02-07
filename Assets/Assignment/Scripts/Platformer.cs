@@ -13,6 +13,7 @@ public class Platformer : MonoBehaviour
     public bool jumping;
     private Rigidbody2D rb2d;
     public GameObject wall;
+    public GameObject button;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,7 @@ public class Platformer : MonoBehaviour
         Jump();
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            jumping = true;
+            jumping = true; // so I can record input during Update and use that input during FixedUpdate
         }
         direction.x = Input.GetAxis("Horizontal");
     }
@@ -60,10 +61,15 @@ public class Platformer : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject != wall)
+        if(collision.gameObject != wall) //check if we are touching anything other than wall and it's children. if so...
         {
-            grounded = true;
+            grounded = true; // set grounded to true
             jumping = false; //set jumping to false
         } 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destroy(collision.gameObject); // if we encounter a trigger collider, kill it.
     }
 }
